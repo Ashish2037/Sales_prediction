@@ -1,10 +1,9 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 
-# Load the trained model
-with open('model.pkl', 'rb') as model_file:
-    trained_model = pickle.load(model_file)
+trained_model = joblib.load('sales_prediction/model.pkl')
+
 
 st.title('Sales Prediction')
 
